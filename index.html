@@ -1,0 +1,59 @@
+<html>
+  <body>
+    <script src="./mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+
+    Here is one mermaid diagram:
+ <div class="mermaid">
+  graph LR
+      A --- B
+      B-->C[fa:fa-ban forbidden]
+      B-->D(fa:fa-spinner);
+  </div>
+<div class="mermaid">
+    gantt
+      title Inclusive end dates (Manual date should end on 4th)
+      dateFormat YYYY-MM-DD
+      axisFormat %d
+      inclusiveEndDates
+      section Section1
+       2 Days: 1, 2019-01-01,2d
+       Manual Date: 2, 2019-01-01,2019-01-03
+  </div>
+
+  <div class="mermaid">
+    graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+  </div>
+<div  class="mermaid">
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+</div>
+    <div class="mermaid">
+      graph TD
+      A[Client] --> B[Load Balancer]
+      B --> C[Server1]
+      B --> D[Server2]
+    </div>
+
+    And here is another:
+    <div class="mermaid">
+      graph TD
+      A[Client] -->|tcp_123| B(Load Balancer)
+      B -->|tcp_456| C[Server1]
+      B -->|tcp_456| D[Server2]
+    </div>
+  </body>
+</html>
